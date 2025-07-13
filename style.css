@@ -1,0 +1,25 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.text-gradient {
+  background: linear-gradient(to right, #ff80b5, #9089fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+img.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+section h2 {
+  margin-bottom: 1rem;
+}
+.card {
+  background-color: #111;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #333;
+}
