@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pearl Rana | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body class="bg-black text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-black text-white px-6 py-4 fixed w-full top-0 shadow-md z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-purple-400">Pearl Rana</h1>
+      <ul class="hidden md:flex space-x-6 font-medium">
+        <li><a href="#home" class="hover:text-purple-300 transition-colors">Home</a></li>
+        <li><a href="#about" class="hover:text-purple-300 transition-colors">About</a></li>
+        <li><a href="#skills" class="hover:text-purple-300 transition-colors">Services</a></li>
+        <li><a href="#experience" class="hover:text-purple-300 transition-colors">Experience</a></li>
+        <li><a href="#contact" class="hover:text-purple-300 transition-colors">Let's Connect</a></li>
+      </ul>
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-btn" class="md:hidden">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-black border-t border-gray-800 mt-4 pt-4">
+      <ul class="space-y-2 font-medium">
+        <li><a href="#home" class="block py-2 hover:text-purple-300 transition-colors">Home</a></li>
+        <li><a href="#about" class="block py-2 hover:text-purple-300 transition-colors">About</a></li>
+        <li><a href="#skills" class="block py-2 hover:text-purple-300 transition-colors">Services</a></li>
+        <li><a href="#experience" class="block py-2 hover:text-purple-300 transition-colors">Experience</a></li>
+        <li><a href="#contact" class="block py-2 hover:text-purple-300 transition-colors">Let's Connect</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-32 bg-gradient-to-b from-indigo-900 to-purple-800">
+    <div class="w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg mb-6" data-aos="fade-up">
+      <img src="pearl.jpg" alt="Pearl Rana" class="w-full h-full object-cover" />
+    </div>
+    <h2 class="text-3xl sm:text-5xl font-bold text-white" data-aos="fade-up" data-aos-delay="100">Hi, I'm <span class="text-purple-300">Pearl Rana</span></h2>
+    <p class="mt-4 text-lg sm:text-xl max-w-2xl text-gray-200" data-aos="fade-up" data-aos-delay="200">Aspiring Tech-Minded Marketer & Student at Thapar University of Engineering and Technology</p>
+    <p class="mt-2 text-md sm:text-lg max-w-2xl text-gray-300" data-aos="fade-up" data-aos-delay="300">Computer Science and Business Systems undergraduate passionate about tech, teamwork, and creative expression. Currently learning web development and exploring the intersection of technology and marketing.</p>
+    <div class="flex space-x-4 mt-6" data-aos="fade-up" data-aos-delay="400">
+      <a href="https://github.com/pearlrana" target="_blank" class="hover:scale-110 transition-transform">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" class="w-6 h-6 invert" alt="GitHub"/>
+      </a>
+      <a href="https://www.linkedin.com/in/pearl-rana-51080b32b" target="_blank" class="hover:scale-110 transition-transform">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" class="w-6 h-6 invert" alt="LinkedIn"/>
+      </a>
+      <a href="mailto:prana1_be24@thapar.edu" class="hover:scale-110 transition-transform">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/gmail.svg" class="w-6 h-6 invert" alt="Email"/>
+      </a>
+    </div>
+  </section>
+
+  <!-- About Me -->
+  <section id="about" class="px-6 py-20 bg-black relative">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-purple-300 text-center mb-12" data-aos="fade-up">About Me</h2>
+      
+      <!-- Split Layout: Image Left, Content Right -->
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Image Side -->
+        <div class="flex justify-center lg:justify-start" data-aos="fade-right">
+          <div class="w-80 h-80 rounded-lg overflow-hidden shadow-2xl">
+            <img src="pearl.jpg" alt="Pearl Rana" class="w-full h-full object-cover profile-image" />
+          </div>
+        </div>
+        
+        <!-- Content Side -->
+        <div class="space-y-6" data-aos="fade-left">
+          <div>
+            <h3 class="text-2xl font-bold text-white mb-4">Hello! I'm Pearl Rana</h3>
+            <p class="text-gray-300 text-lg leading-relaxed">
+              I'm a Computer Science and Business Systems undergraduate at Thapar University, deeply passionate about tech, teamwork, and creative expression. With roots in Dharamshala and eyes on the digital future, I love blending marketing with innovation.
+            </p>
+            
+            <!-- Social Links -->
+            <div class="flex space-x-4 mt-6">
+              <a href="https://github.com/pearlrana" target="_blank" class="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" class="w-5 h-5 invert" alt="GitHub"/>
+                <span>GitHub</span>
+              </a>
+              <a href="https://www.linkedin.com/in/pearl-rana-51080b32b" target="_blank" class="flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors">
+                <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" class="w-5 h-5 invert" alt="LinkedIn"/>
+                <span>LinkedIn</span>
+              </a>
+            </div>
+          </div>
+          
+          <!-- Personality Traits Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+            <div class="trait-card bg-gray-900 border border-purple-500 rounded-lg p-4 hover:bg-gray-800 transition-colors" data-aos="fade-up" data-aos-delay="100">
+              <div class="flex items-center mb-2">
+                <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <h4 class="font-semibold text-white">Team Player</h4>
+              </div>
+              <p class="text-gray-400 text-sm">Thrives in collaborative environments and values diverse perspectives</p>
+            </div>
+            
+            <div class="trait-card bg-gray-900 border border-purple-500 rounded-lg p-4 hover:bg-gray-800 transition-colors" data-aos="fade-up" data-aos-delay="200">
+              <div class="flex items-center mb-2">
+                <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                  </svg>
+                </div>
+                <h4 class="font-semibold text-white">Creative Thinker</h4>
+              </div>
+              <p class="text-gray-400 text-sm">Brings innovative ideas and creative solutions to challenges</p>
+            </div>
+            
+            <div class="trait-card bg-gray-900 border border-purple-500 rounded-lg p-4 hover:bg-gray-800 transition-colors" data-aos="fade-up" data-aos-delay="300">
+              <div class="flex items-center mb-2">
+                <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                  </svg>
+                </div>
+                <h4 class="font-semibold text-white">Tech Enthusiast</h4>
+              </div>
+              <p class="text-gray-400 text-sm">Passionate about emerging technologies and their applications</p>
+            </div>
+            
+            <div class="trait-card bg-gray-900 border border-purple-500 rounded-lg p-4 hover:bg-gray-800 transition-colors" data-aos="fade-up" data-aos-delay="400">
+              <div class="flex items-center mb-2">
+                <div class="w-8 h-8 bg-purple-600 rounded-full flex items-center justify-center mr-3">
+                  <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+                  </svg>
+                </div>
+                <h4 class="font-semibold text-white">Detail-Oriented</h4>
+              </div>
+              <p class="text-gray-400 text-sm">Focuses on quality and precision in every project</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services and Expertise -->
+  <section id="skills" class="px-6 py-20 bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-purple-300 text-center mb-12" data-aos="fade-up">Services and Expertise</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-black border border-gray-800 rounded-lg p-6 hover:border-purple-500 transition-colors card" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-white">Team Collaboration & Planning</h3>
+          </div>
+          <p class="text-gray-400 mb-4">Bringing together diverse teams to achieve common goals through effective communication and strategic planning.</p>
+          <ul class="text-purple-400 list-disc list-inside text-sm space-y-1">
+            <li>Cross-functional teamwork</li>
+            <li>Project coordination</li>
+            <li>Timeline management</li>
+            <li>Communication facilitation</li>
+          </ul>
+          <p class="mt-4 text-purple-300 text-sm italic">Proven experience with Mudra Society</p>
+        </div>
+        
+        <div class="bg-black border border-gray-800 rounded-lg p-6 hover:border-purple-500 transition-colors card" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-white">Event Ideation & Management</h3>
+          </div>
+          <p class="text-gray-400 mb-4">From concept to execution, I help create memorable events that engage audiences and achieve objectives.</p>
+          <ul class="text-purple-400 list-disc list-inside text-sm space-y-1">
+            <li>Creative event planning</li>
+            <li>Logistics coordination</li>
+            <li>Vendor management</li>
+            <li>On-site execution</li>
+          </ul>
+          <p class="mt-4 text-purple-300 text-sm italic">Campus events specialist</p>
+        </div>
+        
+        <div class="bg-black border border-gray-800 rounded-lg p-6 hover:border-purple-500 transition-colors card" data-aos="fade-up" data-aos-delay="300">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-white">Digital Marketing & Strategy</h3>
+          </div>
+          <p class="text-gray-400 mb-4">Combining technical knowledge with marketing insights to create effective digital strategies for modern businesses.</p>
+          <ul class="text-purple-400 list-disc list-inside text-sm space-y-1">
+            <li>Social media strategy</li>
+            <li>Content planning</li>
+            <li>Brand positioning</li>
+            <li>Market analysis</li>
+          </ul>
+          <p class="mt-4 text-purple-300 text-sm italic">Tech-minded marketing approach</p>
+        </div>
+        
+        <div class="bg-black border border-gray-800 rounded-lg p-6 hover:border-purple-500 transition-colors card" data-aos="fade-up" data-aos-delay="400">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-white">Web Development</h3>
+          </div>
+          <p class="text-gray-400 mb-4">Currently learning modern web technologies to build responsive, user-friendly websites and applications.</p>
+          <ul class="text-purple-400 list-disc list-inside text-sm space-y-1">
+            <li>HTML/CSS/JavaScript</li>
+            <li>Responsive design</li>
+            <li>User experience (UX)</li>
+            <li>Modern frameworks</li>
+          </ul>
+          <p class="mt-4 text-purple-300 text-sm italic">Continuous learning journey</p>
+        </div>
+        
+        <div class="bg-black border border-gray-800 rounded-lg p-6 hover:border-purple-500 transition-colors card" data-aos="fade-up" data-aos-delay="500">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-white">Creative Solutions</h3>
+          </div>
+          <p class="text-gray-400 mb-4">Bringing fresh perspectives and innovative thinking to solve complex problems and drive creative outcomes.</p>
+          <ul class="text-purple-400 list-disc list-inside text-sm space-y-1">
+            <li>Problem-solving</li>
+            <li>Creative brainstorming</li>
+            <li>Innovation strategies</li>
+            <li>Design thinking</li>
+          </ul>
+          <p class="mt-4 text-purple-300 text-sm italic">Creative expression meets strategy</p>
+        </div>
+        
+        <div class="bg-black border border-gray-800 rounded-lg p-6 hover:border-purple-500 transition-colors card" data-aos="fade-up" data-aos-delay="600">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+              <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5zM15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-white">Communication & Outreach</h3>
+          </div>
+          <p class="text-gray-400 mb-4">Effective communication skills for engaging with diverse audiences and building meaningful connections.</p>
+          <ul class="text-purple-400 list-disc list-inside text-sm space-y-1">
+            <li>Public speaking</li>
+            <li>Content creation</li>
+            <li>Community engagement</li>
+            <li>Relationship building</li>
+          </ul>
+          <p class="mt-4 text-purple-300 text-sm italic">Connecting people and ideas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="px-6 py-20 bg-black">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-purple-300 text-center mb-12" data-aos="fade-up">Experience</h2>
+      <div class="bg-gray-900 p-8 rounded-lg border border-gray-800 card" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-2xl font-semibold text-white mb-2">Event Management Team Member</h3>
+        <p class="text-purple-400 text-lg mb-1">Mudra Society</p>
+        <p class="text-gray-400 text-sm mb-6">2024 – Present | Thapar University | Team Collaboration</p>
+        <p class="text-gray-300 mb-6 leading-relaxed">As a dedicated member of the Mudra Society's Event Management Team, I've gained valuable experience in organizing and executing large-scale campus events. This role has enhanced my leadership skills, taught me the importance of teamwork, and provided hands-on experience in project management.</p>
+        <h4 class="text-lg font-semibold text-white mb-4">Key Responsibilities</h4>
+        <ul class="text-purple-400 list-disc list-inside space-y-2">
+          <li>Assisted in planning and executing campus events</li>
+          <li>Coordinated logistics and communication efforts</li>
+          <li>Collaborated with diverse teams across different departments</li>
+          <li>Contributed to event ideation and creative planning</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="px-6 py-20 bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-purple-300 text-center mb-12" data-aos="fade-up">Let's Connect</h2>
+      
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Contact Info -->
+        <div class="space-y-6" data-aos="fade-right">
+          <div>
+            <h3 class="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+            <p class="text-gray-300 mb-8">I'm always open to discussing new opportunities, creative projects, or just having a friendly chat about technology and marketing.</p>
+          </div>
+          
+          <div class="space-y-4">
+            <div class="flex items-center space-x-4">
+              <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-gray-400 text-sm">Email</p>
+                <a href="mailto:prana1_be24@thapar.edu" class="text-purple-300 hover:text-purple-200 transition-colors">prana1_be24@thapar.edu</a>
+              </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+              <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-gray-400 text-sm">Phone</p>
+                <p class="text-white">+91 7018459038</p>
+              </div>
+            </div>
+            
+            <div class="flex items-center space-x-4">
+              <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-gray-400 text-sm">Location</p>
+                <p class="text-white">Patiala, Punjab</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div data-aos="fade-left">
+          <form id="contact-form" class="space-y-6">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required 
+                class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
+                placeholder="Your full name"
+              />
+            </div>
+            
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
+                placeholder="your.email@example.com"
+              />
+            </div>
+            
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="5" 
+                required 
+                class="w-full px-4 py-3 rounded-lg bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors resize-none"
+                placeholder="Tell me about your project or just say hi!"
+              ></textarea>
+            </div>
+            
+            <button 
+              type="submit" 
+              class="w-full bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg text-white font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+            >
+              <span id="submit-text">Send Message</span>
+              <span id="loading-text" class="hidden">
+                <span class="spinner"></span>Sending...
+              </span>
+            </button>
+          </form>
+          
+          <!-- Success/Error Messages -->
+          <div id="form-message" class="mt-4 p-4 rounded-lg hidden">
+            <p id="message-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black border-t border-gray-800 px-6 py-8">
+    <div class="max-w-6xl mx-auto text-center">
+      <p class="text-gray-400">&copy; 2024 Pearl Rana. All rights reserved.</p>
+      <div class="flex justify-center space-x-6 mt-4">
+        <a href="https://github.com/pearlrana" target="_blank" class="text-gray-400 hover:text-purple-300 transition-colors">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" class="w-5 h-5 invert" alt="GitHub"/>
+        </a>
+        <a href="https://www.linkedin.com/in/pearl-rana-51080b32b" target="_blank" class="text-gray-400 hover:text-purple-300 transition-colors">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/linkedin.svg" class="w-5 h-5 invert" alt="LinkedIn"/>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
